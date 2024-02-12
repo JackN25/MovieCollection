@@ -432,6 +432,9 @@ public class MovieCollection
                             if (movies.get(i).getUserRating() >= top50Rated.get(j).getUserRating()) {
                                 top50Rated.add(j, movies.get(i));
                                 placed = true;
+                                if (top50Rated.size() == 51) {
+                                    top50Rated.remove(50);
+                                }
                                 break;
                             }
                         }
